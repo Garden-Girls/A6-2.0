@@ -20,9 +20,12 @@ var emily =  require('./routes/emily');
 var search = require('./routes/search');
 var addPage = require('./routes/addPage');
 var filtered = require('./routes/filtered');
-var editPlantPage=require('./routes/filtered');
-var orchidInfoPage = require('./routes/orchidInfoPage');
-var lavenderInfoPage =require('./routes/lavenderInfoPage');
+var editPlantPage= require('./routes/editPlantPage');
+var orchidInfopage = require('./routes/orchidInfopage');
+var lavenderInfopage = require('./routes/lavenderInfopage');
+var rosemaryInfopage = require('/routes/rosemaryInfopage');
+var filteredHerb = require('./routes/filteredHerb');
+var filteredFern = require('./routes/filteredFern');
 var loginPage = require('./routes/loginPage');
 
 
@@ -64,8 +67,11 @@ app.get('/search', search.view);
 app.get('/addPage', addPage.view);
 app.get('/filtered',filtered.view);
 app.get('/editPlantPage',editPlantPage.view);
-app.get('/orchidInfoPage',orchidInfoPage.view);
-app.get('/lavenderInfoPage',lavenderInfoPage.view);
+app.get('/orchidInfopage',orchidInfopage.view);
+app.get('/lavenderInfopage',lavenderInfopage.view);
+app.get('/rosemaryInfopage',rosemaryInfopage.view);
+app.get('/filteredHerb',filteredHerb.view);
+app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
 
 // Example route
