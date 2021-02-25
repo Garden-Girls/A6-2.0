@@ -59,11 +59,23 @@ h3 {
 	align-items: center;
 }
 
-#addPhoto {
+/*#addPhoto {
 	width: 40px;
 	height: 40px;
 	float: right;
 	margin-right: 20px;
+}*/
+#addPhoto {
+	height: 25px;
+	width: 25px;
+	text-decoration: none;
+	color: black;
+	margin-left: 0;
+	margin-right: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: 3px solid black;
 }
 
 #photos {
@@ -96,8 +108,30 @@ h3 {
 	grid-gap: 20px;
 }
 
-.moods div {
+input[type='radio'][name='buttonGroup'] {
+	display: none;
 }
+
+label {
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: gray;
+	width: 60px;
+	text-align: center;
+}
+
+input[type='radio'][name='buttonGroup']:checked + label {background-color: yellow;}
+/*.moods .face {
+	border: 3px outset white;
+	display: flex;
+	justify-content: space-around;
+}
+
+.moods .selected{
+	border: 3px inset gray;
+}*/
 
 .text {
 	width: 90%;

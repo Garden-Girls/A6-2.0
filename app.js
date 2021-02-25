@@ -28,6 +28,7 @@ var rosemaryInfopage = require('./routes/rosemaryInfopage');
 var filteredHerb = require('./routes/filteredHerb');
 var filteredFern = require('./routes/filteredFern');
 var loginPage = require('./routes/loginPage');
+var addPhoto = require('./routes/addPhoto');
 
 
 
@@ -75,12 +76,14 @@ app.get('/rosemaryInfopage',rosemaryInfopage.view);
 app.get('/filteredHerb',filteredHerb.view);
 app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
+app.get('/addPhoto', addPhoto.view);
 
 // Example route
 // app.get('/users', user.list);
 
 //testing diff entries
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum', dayEntry.view);
+app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
 //end testing
 
 http.createServer(app).listen(app.get('port'), function(){
