@@ -32,12 +32,16 @@ function renderCal() {
 		}
 		//added test
 		if (newDiv.classList.contains('loggable')) {
-			var formatMonth = date.getMonth() + 1;
+			var formatYear = date.getFullYear();
+			var formatMonth = date.getMonth();
+			if (formatMonth == 0) {
+				formatMonth = 12;
+				formatYear -= 1;
+			}
 			if (formatMonth < 10) {
 				formatMonth = "0" + formatMonth;
 			}
-			var formatYear = date.getFullYear();
-			var formatDay = i;
+			var formatDay = prevLastDay - i + 1;
 			if (formatDay < 10) {
 				formatDay = "0" + formatDay;
 			}
@@ -71,6 +75,7 @@ function renderCal() {
 		}
 		//added test
 		if (newDiv.classList.contains('loggable')) {
+			var formatYear = date.getFullYear();
 			var formatMonth = date.getMonth() + 1;
 			if (formatMonth < 10) {
 				formatMonth = "0" + formatMonth;
@@ -105,11 +110,15 @@ function renderCal() {
 		}
 		//added test
 		if(newDiv.classList.contains('loggable')) {
-			var formatMonth = date.getMonth() + 1;
+			var formatYear = date.getFullYear();
+			var formatMonth = date.getMonth() + 2;
+			if (formatMonth == 13){
+				formatMonth = 1;
+				formatYear += 1;
+			}
 			if (formatMonth < 10) {
 				formatMonth = "0" + formatMonth;
 			}
-			var formatYear = date.getFullYear();
 			var formatDay = i;
 			if (formatDay < 10) {
 				formatDay = "0" + formatDay;
