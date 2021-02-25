@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 // all pages HERE! no slash - naming
+
 var index = require('./routes/index');
 var myPlantsPage = require('./routes/myPlantsPage');
 var calendar = require('./routes/calendar');
@@ -54,6 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+
 
 app.get('/', index.view);
 app.get('/myPlantsPage', myPlantsPage.view);

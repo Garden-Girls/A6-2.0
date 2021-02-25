@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <style>textarea{resize:none;}</style>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='js/bootstrap.js'></script>
+
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
 
@@ -29,32 +35,35 @@
   <div class='journal'>
     
     <div class="top">
-    <img id='journalPhoto' src="images/Emily.svg">
-      <h2>Emily</h2>
+    <img id='journalPhoto' src="images/emily.svg">
+      <h2>emily</h2>
       <p id='top'>
       Add Journal Entry<br>
       <label for="start"></label>
       <input type="date" id="start" name="start"
        value="2021-02-24"
        min="2015-01-01" max="2021-12-31">
+
     </p></div>
     
-     <div class="bottom">
+    <div class="bottom">
       <p id='how-is-it'>How is your plant today?</p>
-        <button id='bad-face'>
+        <button onClick="bad()" id='bad-face'>
           <img src="images/bad-face.svg">
         </button>
-        <button id='normal-face'>
+        <button onClick="normal()" id='normal-face'>
           <img src="images/normal-face.svg"></button>
 
-          <button id='good-face'>
+          <button onClick='good()' id='good-face'>
           <img src="images/good-face.svg"></button>
+    
       <p id='comments'>Comments</p>
       <img id= "comments-rectangle" src="images/comments-rectangle.svg">
-      
-      <form action="/action_page.php">
+
+      <form>
         <input type="text" id="fname" name="fname" >
         </form>
+       <button onClick="Okay()" type="button" id="Okay">Okay</button>
 
       <p id='watering-reminder'>Watering Reminder</p>
       <img id="reminder-rectangle" src="images/reminder-rectangle.svg">
@@ -92,7 +101,7 @@
 
   <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
 
-  <a id='home-button' href="/index">
+  <a id='home-button' href="/">
       <img src="images/home-button.svg">
   </a>
 
@@ -106,8 +115,7 @@
   </div>
 
 
-
+<script src='js/myPlants.js'></script>
 <script type="app.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
