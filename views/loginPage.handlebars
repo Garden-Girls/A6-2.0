@@ -3,36 +3,38 @@
 <head>
 	<meta charset="utf-8">
 	<meta name='viewport' content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
 
+	<title>Login</title>
+	<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
-	<div class="page-container">
+	<div class="container">
 
-		<div class="plant-parenthood" href='#'>
-			<img src="../public/images/plant-parenthood.svg">
-		</div>
-
-			<div class="leaf" href='#'>
-				<img src="../public/images/leaf.svg">
+		<div class="logo">
+			<div class="plant-parenthood">
+				<img src="images/plant-parenthood.svg">
 			</div>
 
-			<div class='home-photo' href='#'>
-				<img src="../public/images/home-photo.svg">
+			<div class="leaf">
+				<img src="images/leaf.svg">
+			</div>
 		</div>
 
-		<a class='my-plants-button' href='my-plants-page.html'>
-			<img src="../public/images/my-plants-button.svg">	
-		</a>
-		<br>
-		<a class='add-plants-button' href='search.html'>
-			<img src='../public/images/add-plants-button.svg'>
-		</a>
-
+		<hr>
+		<h2>Sign In</h2>
+		<div class="input-container">
+			<div>
+				<input type="text" placeholder="Username">
+			</div>
+			<div>
+				<input type="password" placeholder="Password">
+			</div>
+		</div>
+			<div>
+				<button type="button" onclick="window.location.href='/'">Login</button>
+			</div>
 	</div>
-
-
 
 <script type="app.js"></script>
 <script src="../public/js/bootstrap.min.js"></script>

@@ -23,6 +23,7 @@ var filtered = require('./routes/filtered');
 var editPlantPage=require('./routes/filtered');
 var orchidInfoPage = require('./routes/orchidInfoPage');
 var lavenderInfoPage =require('./routes/lavenderInfoPage');
+var loginPage = require('./routes/loginPage');
 
 
 
@@ -65,6 +66,7 @@ app.get('/filtered',filtered.view);
 app.get('/editPlantPage',editPlantPage.view);
 app.get('/orchidInfoPage',orchidInfoPage.view);
 app.get('/lavenderInfoPage',lavenderInfoPage.view);
+app.get('/loginPage', loginPage.view);
 
 // Example route
 // app.get('/users', user.list);
