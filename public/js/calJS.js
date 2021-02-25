@@ -1,6 +1,9 @@
 const date = new Date(); //today's date
 
 function renderCal() {
+	var selectedPlant = document.querySelector('#plantDrop').value;
+	console.log(selectedPlant);
+
 	const months = ["January", "February", "March", "April", "May", "June", 
 				"July", "August", "September", "October", "November", "December"];
 
@@ -27,6 +30,22 @@ function renderCal() {
 			date.getMonth() <= new Date().getMonth()) {
 			newDiv.className = 'loggable';
 		}
+		//added test
+		if (newDiv.classList.contains('loggable')) {
+			var formatMonth = date.getMonth() + 1;
+			if (formatMonth < 10) {
+				formatMonth = "0" + formatMonth;
+			}
+			var formatYear = date.getFullYear();
+			var formatDay = i;
+			if (formatDay < 10) {
+				formatDay = "0" + formatDay;
+			}
+			var customLink = "dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
+
+			newDiv.setAttribute("href", customLink);
+		}
+		//end test
 		monthDays.appendChild(newDiv);
 	}
 
@@ -50,6 +69,22 @@ function renderCal() {
 		if (i == new Date().getDate() && date.getMonth() == new Date().getMonth() && date.getFullYear() == new Date().getFullYear()) {
 			newDiv.className += ' today';
 		}
+		//added test
+		if (newDiv.classList.contains('loggable')) {
+			var formatMonth = date.getMonth() + 1;
+			if (formatMonth < 10) {
+				formatMonth = "0" + formatMonth;
+			}
+			var formatYear = date.getFullYear();
+			var formatDay = i;
+			if (formatDay < 10) {
+				formatDay = "0" + formatDay;
+			}
+			var customLink = "dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
+
+			newDiv.setAttribute("href", customLink);
+		}
+		//end test
 		newDiv.innerHTML = i;
 		monthDays.appendChild(newDiv);
 	}
@@ -68,6 +103,22 @@ function renderCal() {
 		if (date.getFullYear() == new Date().getFullYear() && date.getMonth() < new Date().getMonth()) {
 			newDiv.className = 'loggable';
 		}
+		//added test
+		if(newDiv.classList.contains('loggable')) {
+			var formatMonth = date.getMonth() + 1;
+			if (formatMonth < 10) {
+				formatMonth = "0" + formatMonth;
+			}
+			var formatYear = date.getFullYear();
+			var formatDay = i;
+			if (formatDay < 10) {
+				formatDay = "0" + formatDay;
+			}
+			var customLink = "dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
+
+			newDiv.setAttribute("href", customLink);
+		}
+		//end test
 		monthDays.appendChild(newDiv);
 	}
 
@@ -77,14 +128,7 @@ function renderCal() {
 
 	var calendarDays = document.querySelector('#calendarDays');
 	var hasLink = calendarDays.getElementsByClassName("loggable");
-	var i;
-	for (i = 0; i < hasLink.length; i++) {
-		hasLink[i].setAttribute("href", "dayEntry"); //placeholder, change to journal entry
-	}
-	//!!! since journal entry may not exist and href may not be valid, maybe change loggable class to only those 
-	//with an added entry
 
-	//!!! atm, loggable class is applied incorrectly
 }
 
 renderCal();
@@ -99,15 +143,9 @@ document.querySelector('#nextMon').addEventListener('click', function() {
 	renderCal();
 });
 
-//Basic calendar stuff ^
-//journaling 
-var selectedPlant = document.querySelector('#plantDrop').value;
-console.log(selectedPlant); //move into render calendar
 
 document.querySelector('#plantDrop').onchange = function() {
 	console.log("plantChanged");
 	renderCal();
 	//rerender Cal depending on plant selected (how to get info?)
 };
-
-
