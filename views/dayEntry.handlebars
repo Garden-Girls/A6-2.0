@@ -24,11 +24,12 @@
 
       <div id="photoHeader">
         <h3>Your photos for {{date}}</h3>
-        <button type="button" id="addPhoto">+</button>
+        <!-- <button type="button" id="addPhoto">+</button> -->
+        <a href="/addPhoto/{{plant}}/{{date}}" id="addPhoto">+</a>
       </div>
 
       <div id="photos">
-        
+        <!--
         <div class="slide">
           <img src="/images/froggy.svg" />
           <p>9:30 AM</p>
@@ -53,32 +54,37 @@
           <img src="/images/bert.svg" />
           <p>10:30 PM</p>
         </div>
+      -->
         
-        <!--{{#each slides}}
+        {{#each slides}}
           <div class="slide">
             <img src="/images/{{image}}" />
             <p>{{caption}}</p>
           </div>
         {{/each}}
-      -->
+      
       </div>
 
       <h3>Plant Condition</h3>
       <div class="moods">
-        <div class="face">
+        <input type="radio" name="buttonGroup" value="one" id="one" checked="checked"><label for="one">Bad</label>
+        <input type="radio" name="buttonGroup" value="two" id="two"><label for="two">Okay</label>
+        <input type="radio" name="buttonGroup" value="three" id="three"><label for="three">Good</label>
+        <!--<div class="face">
           <img src="/images/bad-face.svg" />
         </div>
-        <div class="face selected">
+        <div class="face">
           <img src="/images/normal-face.svg" />
         </div>
         <div class="face">
           <img src="/images/good-face.svg" />
         </div>
+      -->
       </div>
 
       <h3>Notes</h3>
       <div class="text">
-        <p>filler</p>
+        <p>{{text}}</p>
       </div>
 
       <button type="button" id="editing">Edit</button>
@@ -98,9 +104,9 @@
       </div>
   </div>
 
-  <!--
-  <script src="js/entry.js"></script>
-  -->
+  
+  <script src="/js/entryJS.js"></script>
+  
   <script type="app.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   </body>
