@@ -594,6 +594,7 @@
 	font-size: 20px;
 	line-height: 26px;}
 
+
 #ferns-box {
 	position: absolute;
 	width: 24px;
@@ -750,6 +751,14 @@ p #subtitle{
 	left: 253px;
 	top: 288px;
 	}
+
+.bottom #sort{
+	position: absolute;
+	width: 33px;
+	height: 35px;
+	left: 314px;
+	top: 289px;
+}
 
 .result-1 #box{
 	position: absolute;
