@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	overflow: none;
+}
+
+.header {
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 15px;
+}
+
+.header img {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.subheader {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+/*need to format better*/
+/*left outline for visibility*/
+#prevPage {
+	height: 25px;
+	width: 25px;
+	margin-left: 0;
+	margin-right: 10px;
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h3 {
+	width: 90%;
+	margin: 10px;
+	margin-top: 15px;
+	font-size: 18px;
+}
+
+#photoHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#addPhoto {
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-right: 20px;
+}
+
+#photos {
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	background-color: green;
+	overflow: auto;
+	white-space: nowrap;
+	outline: 2px solid black;
+}
+
+#photos .slide {
+	display: inline-block;
+}
+
+#photos div {
+	background-color: transparent;
+	margin: 10px;
+	text-align: center;
+}
+
+.moods {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 5px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.moods div {
+}
+
+.text {
+	width: 90%;
+	max-height: 130px;
+	margin: auto;
+	overflow-y: scroll;
+	padding: 10px;
+	outline: 2px solid black;
+}
+
+#editing {
+	width: 35px;
+	margin-right: 20px;
+	margin-top: 5px;
+	float: right;
+}
+
+/*should change to div and buttons*/
+
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
+	border-top: 2px solid black;
+}
