@@ -1,7 +1,9 @@
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
+	max-width: 375px;
+	max-height: 667px;
+	margin: auto;
+	position: relative;
 }
 
 .container {

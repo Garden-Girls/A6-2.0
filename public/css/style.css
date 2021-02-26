@@ -911,3 +911,13 @@ p #subtitle{
 	left: 289px;
 	top: 488px;
 }
+
+#help :hover{
+	background-color: purple;
+	cursor: pointer;
+}
+
+#add :hover{
+	background-color: blue;
+	cursor: pointer;
+}

@@ -68,8 +68,10 @@
 		]
 	});
 };*/
+var data = require("../data.json");
 
 exports.view = function(req, res) {
+	console.log(data);
 	var plantToShow = req.params.plantName;
 
 	var monthToShow = req.params.monthNum;
@@ -81,24 +83,7 @@ exports.view = function(req, res) {
 	res.render('dayEntry', {
 		"plant": plantToShow,
 		"date": dateToShow,
-		"slides": [
-			{
-				"image": "bert.svg",
-				"caption": "1:30 PM"
-			},
-			{
-				"image": "froggy.svg",
-				"caption": "6:00 PM"
-			},
-			{
-				"image": "froggy.svg",
-				"caption": "7:00 PM"
-			},
-			{
-				"image": "emily.svg",
-				"caption": "11:00 PM"
-			}
-		],
-		"text": "Leaf edges are yellowing. The soil is dry after half a day. Maybe water more?"
+		"slides":data.slides,
+		"text":data.text
 	});
 };

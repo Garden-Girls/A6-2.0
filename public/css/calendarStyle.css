@@ -3,6 +3,7 @@
 	max-width: 375px;
 	max-height: 667px;
 	position: relative;
+	margin:0 auto;
 }
 
 .container {
@@ -97,6 +98,7 @@ button {
 	align-items: center;
 	transition: background-color 0.2s;
 	outline: 2px solid black;
+	width:43.5px;
 }
 
 .days {
@@ -109,6 +111,7 @@ button {
 	font-size: 1.2rem;
 	text-decoration: none;
 	height: 51px;
+	width:43.5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -135,11 +138,24 @@ button {
 	background-color: yellow;
 }
 
-.footer {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	position: fixed;
-	bottom: 0;
-	border-top: 2px solid black;
+#calendar-button{width: 46px;
+	height: 44px;
+	top:-50px;
+	left:80px;}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: -50px;
+	left: -80px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+}
+
+#bottom-rectangle{
+	position: relative;
+	width: 375px;
+	height: 58px;
+	left: 0px;
+	top: 609px;
 }

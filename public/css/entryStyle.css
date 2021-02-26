@@ -151,11 +151,30 @@ input[type='radio'][name='buttonGroup']:checked + label {background-color: yello
 
 /*should change to div and buttons*/
 
-.footer {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	position: fixed;
-	bottom: 0;
-	border-top: 2px solid black;
+#calendar-button{width: 46px;
+	height: 44px;
+	top:-50px;
+	left:80px;}
+
+#calendar-button{
+	width: 46px;
+	height: 44px;
+	top:-50px;
+	left:250px;}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: -50px;
+	left: 82px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+}
+
+#bottom-rectangle{
+	position: relative;
+	width: 375px;
+	height: 58px;
+	left: 0px;
+	top: 609px;
 }

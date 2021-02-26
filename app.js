@@ -57,8 +57,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/',loginPage.view);
+app.get('/index', index.view);
 
-app.get('/', index.view);
 app.get('/myPlantsPage', myPlantsPage.view);
 app.get('/calendar', calendar.view);
 app.get('/bert', bert.view);
@@ -77,6 +78,7 @@ app.get('/filteredHerb',filteredHerb.view);
 app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
+
 
 // Example route
 // app.get('/users', user.list);
